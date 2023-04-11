@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import MDButton from '@/components/MDButton.vue';
+</script>
+
 <template>
   <div class="flex items-center justify-center">
     <div class="flex flex-col gap-2 w-8/12">
@@ -16,10 +20,10 @@
                 <div>Author</div>
 
                 <div class="flex gap-2 items-center justify-between">
-                  <button>Add to library</button>
-                  <button>Start reading</button>
-                  <button>Report</button>
-                  <button>Upload Chapter</button>
+                  <MDButton button-type="primary">Add to library</MDButton>
+                  <MDButton>Start reading</MDButton>
+                  <MDButton>Report</MDButton>
+                  <MDButton>Upload Chapter</MDButton>
                 </div>
               </div>
             </div>
