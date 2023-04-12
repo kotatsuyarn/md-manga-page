@@ -71,8 +71,8 @@ import MDTabBar from '@/components/md/MDTabBar.vue';
 
               <div class="flex flex-col gap-2 w-9/12">
                 <div class="flex items-center justify-between">
-                  <button>Descending</button>
-                  <button>Collapse</button>
+                  <MDButton text-size="sm" rounded>Descending</MDButton>
+                  <MDButton text-size="sm" rounded>Collapse</MDButton>
                 </div>
 
                 <div>Chapters</div>
