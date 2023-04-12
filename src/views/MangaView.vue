@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import MDBadge from '@/components/MDBadge.vue';
-import MDButton from '@/components/MDButton.vue';
+import MDBadge from '@/components/md/MDBadge.vue';
+import MDButton from '@/components/md/MDButton.vue';
 </script>
 
 <template>
