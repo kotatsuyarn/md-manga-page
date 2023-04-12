@@ -6,9 +6,11 @@ const props = withDefaults(
   defineProps<{
     value?: number;
     tabNames: string[];
+    fillWidth?: boolean;
   }>(),
   {
     value: 0,
+    fillWidth: false,
   },
 );
 
@@ -38,7 +40,11 @@ function selectTab(value: number): void {
 
 <template>
   <div class="flex flex-col gap-2">
-    <div class="flex">
+    <div
+      :class="{
+        ['flex']: !fillWidth,
+      }"
+    >
       <div class="p-1 flex gap-2 items-center bg-true-gray-500 rounded">
         <MDButton
           v-for="(tabName, index) of tabNames"
