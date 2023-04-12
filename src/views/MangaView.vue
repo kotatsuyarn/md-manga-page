@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import MDBadge from '@/components/MDBadge.vue';
 import MDButton from '@/components/MDButton.vue';
 </script>
 
@@ -6,7 +7,7 @@ import MDButton from '@/components/MDButton.vue';
   <div class="flex items-center justify-center">
     <div class="flex flex-col gap-2 w-8/12">
       <div class="flex flex-col gap-4 border border-solid border-gray-300">
-        <div>
+        <div class="flex flex-col gap-4">
           <div class="flex gap-2">
             <div class="w-[200px] h-[280px] bg-gray-300"></div>
 
@@ -32,20 +33,33 @@ import MDButton from '@/components/MDButton.vue';
           <div class="flex gap-2">
             <div class="w-[200px]"></div>
 
-            <div>
+            <div class="flex flex-col gap-4">
               <div class="flex gap-2 items-center justify-between">
-                <span>Genre 1</span>
-                <span>Genre 2</span>
-                <span>Genre 3</span>
-                <span>Publication</span>
-                <span>Status</span>
+                <MDBadge href="#" has-background>Genre 1</MDBadge>
+                <MDBadge href="#" has-background>Genre 2</MDBadge>
+                <MDBadge href="#" has-background>Genre 3</MDBadge>
+                <MDBadge has-dot>Publication, Status</MDBadge>
               </div>
-              <div>Statistics</div>
+
+              <div class="flex gap-2 items-center">
+                <span>9.03</span>
+                <span>21k</span>
+                <span>355</span>
+                <span>N/A</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div>Description</div>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+          sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+          diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+          gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
       </div>
 
       <div class="flex flex-col gap-2 w-full border border-solid border-gray-300">
