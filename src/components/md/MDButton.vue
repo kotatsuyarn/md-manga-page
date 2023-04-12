@@ -28,7 +28,7 @@ withDefaults(
 <template>
   <button
     type="button"
-    class="px-4 py-2 text-light-100 border-none"
+    class="px-4 py-2 text-light-100 border-none cursor-pointer"
     :class="{
       ['bg-true-gray-500 hover:bg-true-gray-600 active:bg-true-gray-700']:
         !active && buttonType === 'default',
