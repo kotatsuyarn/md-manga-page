@@ -59,8 +59,6 @@ function selectTab(value: number): void {
       </div>
     </div>
 
-    <div>
-      <slot :name="lowerCaseTabNames[state.currentTab]" />
-    </div>
+    <slot :name="lowerCaseTabNames[state.currentTab]" />
   </div>
 </template>
