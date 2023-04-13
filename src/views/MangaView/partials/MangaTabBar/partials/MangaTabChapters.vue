@@ -8,21 +8,27 @@ import MDButton from '@/components/md/MDButton.vue';
       <div>
         <div class="p-2 flex flex-col bg-true-gray-500 rounded">
           <div>Author</div>
-          <div>Author name</div>
+          <div class="flex gap-2 flex-wrap items-center">
+            <div>Author 1</div>
+            <div>Author 2</div>
+          </div>
         </div>
       </div>
 
       <div>
         <div class="p-2 flex flex-col bg-true-gray-500 rounded">
           <div>Artist</div>
-          <div>Artist name</div>
+          <div class="flex gap-2 flex-wrap items-center">
+            <div>Artist 1</div>
+            <div>Artist 2</div>
+          </div>
         </div>
       </div>
 
       <div>
         <div class="p-2 flex flex-col bg-true-gray-500 rounded">
           <div>Genres</div>
-          <div class="flex gap-2 items-center">
+          <div class="flex gap-2 flex-wrap items-center">
             <div>Genre 1</div>
             <div>Genre 2</div>
             <div>Genre 3</div>
@@ -33,9 +39,29 @@ import MDButton from '@/components/md/MDButton.vue';
 
       <div>
         <div class="p-2 flex flex-col bg-true-gray-500 rounded">
+          <div>Themes</div>
+          <div class="flex gap-2 flex-wrap items-center">
+            <div>Theme 1</div>
+            <div>Theme 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="p-2 flex flex-col bg-true-gray-500 rounded">
           <div>Demographic</div>
-          <div class="flex gap-2 items-center">
+          <div class="flex gap-2 flex-wrap items-center">
             <div>Demographic 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="p-2 flex flex-col bg-true-gray-500 rounded">
+          <div>Format</div>
+          <div class="flex gap-2 flex-wrap items-center">
+            <div>Format 1</div>
+            <div>Format 2</div>
           </div>
         </div>
       </div>
