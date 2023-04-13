@@ -3,7 +3,7 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <main class="font-sans">
+  <main class="p-2 font-sans">
     <RouterView />
   </main>
 </template>
