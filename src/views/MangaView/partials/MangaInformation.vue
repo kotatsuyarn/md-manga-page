@@ -33,10 +33,10 @@ import MDButton from '@/components/md/MDButton.vue';
 
         <div class="flex flex-col gap-4">
           <div class="flex gap-2 items-center justify-between">
-            <MDBadge href="#" has-background>Genre 1</MDBadge>
-            <MDBadge href="#" has-background>Genre 2</MDBadge>
-            <MDBadge href="#" has-background>Genre 3</MDBadge>
-            <MDBadge has-dot>Publication, Status</MDBadge>
+            <MDBadge href="#">Genre 1</MDBadge>
+            <MDBadge href="#">Genre 2</MDBadge>
+            <MDBadge href="#">Genre 3</MDBadge>
+            <MDBadge has-dot only-text>Publication, Status</MDBadge>
           </div>
 
           <div class="flex gap-2 items-center">
