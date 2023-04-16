@@ -19,10 +19,10 @@ import MDButton from '@/components/md/MDButton.vue';
             <div>Author</div>
 
             <div class="flex gap-2 items-center justify-between">
-              <MDButton button-type="primary" rounded>Add to library</MDButton>
-              <MDButton rounded>Start reading</MDButton>
-              <MDButton rounded>Report</MDButton>
-              <MDButton rounded>Upload Chapter</MDButton>
+              <MDButton button-type="primary">Add to library</MDButton>
+              <MDButton>Start reading</MDButton>
+              <MDButton>Report</MDButton>
+              <MDButton>Upload Chapter</MDButton>
             </div>
           </div>
         </div>
