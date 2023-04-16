@@ -53,7 +53,9 @@ function selectTab(value: number): void {
           :active="state.currentTab === index"
           @click="selectTab(index)"
         >
-          {{ tabName }}
+          <slot name="tabName" :tabName="tabName">
+            {{ tabName }}
+          </slot>
         </MDButton>
       </div>
     </div>
