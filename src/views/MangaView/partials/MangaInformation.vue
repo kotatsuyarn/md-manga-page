@@ -28,7 +28,7 @@ import MDButton from '@/components/md/MDButton.vue';
         </div>
       </div>
 
-      <div class="flex gap-2">
+      <div class="flex gap-6">
         <div class="w-[200px]"></div>
 
         <div class="flex flex-col gap-4">
