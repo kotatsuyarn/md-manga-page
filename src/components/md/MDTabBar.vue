@@ -49,9 +49,8 @@ function selectTab(value: number): void {
         <MDButton
           v-for="(tabName, index) of tabNames"
           :key="`md-tab-bar-${tabName}`"
-          text-size="sm"
+          size="sm"
           :active="state.currentTab === index"
-          rounded
           @click="selectTab(index)"
         >
           {{ tabName }}
