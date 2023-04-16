@@ -7,7 +7,7 @@ import MDButton from '@/components/md/MDButton.vue';
   <div class="flex flex-col gap-4 border border-solid border-gray-300">
     <div class="flex flex-col gap-4">
       <div class="flex gap-6">
-        <div class="w-[200px] h-[280px] bg-true-gray-300 rounded"></div>
+        <div class="w-[200px] h-[280px] bg-true-gray-400 rounded"></div>
 
         <div class="flex flex-col justify-between">
           <div class="flex flex-col gap-2">
