@@ -1,53 +1,59 @@
 <script setup lang="ts">
-type ButtonType = 'primary' | 'default';
-type ButtonTextSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl';
+import { computed } from 'vue';
 
-withDefaults(
+type ButtonType = 'primary' | 'default';
+type ButtonSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl';
+type ButtonRounded = 'all' | 'none' | 'top' | 'right' | 'bottom' | 'left';
+
+const props = withDefaults(
   defineProps<{
     buttonType?: ButtonType;
-    textSize?: ButtonTextSize;
-    rounded?: boolean;
-    roundedTop?: boolean;
-    roundedRight?: boolean;
-    roundedBottom?: boolean;
-    roundedLeft?: boolean;
+    size?: ButtonSize;
+    rounded?: ButtonRounded;
     active?: boolean;
+    href?: string;
+    noShadow?: boolean;
   }>(),
   {
     buttonType: 'default',
-    textSize: 'base',
-    roundedTop: false,
-    roundedRight: false,
-    roundedBottom: false,
-    roundedLeft: false,
+    size: 'base',
+    rounded: 'all',
     active: false,
+    href: '',
+    noShadow: false,
   },
 );
+
+const isLink = computed(() => props.href.length > 0);
+const is = computed(() => (isLink.value ? 'a' : 'button'));
 </script>
 
 <template>
-  <button
-    type="button"
-    class="px-4 py-2 text-light-100 border-none cursor-pointer shadow"
+  <component
+    :is="is"
+    :href="isLink ? href : null"
     :class="{
+      ['border-none cursor-pointer']: true,
       ['bg-true-gray-500 hover:bg-true-gray-600 active:bg-true-gray-700']:
         !active && buttonType === 'default',
-      ['bg-orange-500 hover:bg-orange-600 active:bg-orange-700']:
-        !active && buttonType === 'primary',
+      ['bg-sky-500 hover:bg-sky-600 active:bg-sky-700']: !active && buttonType === 'primary',
       ['bg-true-gray-700']: active && buttonType === 'default',
-      ['bg-orange-700']: active && buttonType === 'primary',
-      ['text-xs']: textSize === 'xs',
-      ['text-sm']: textSize === 'sm',
-      ['text-base']: textSize === 'base',
-      ['text-lg']: textSize === 'lg',
-      ['text-xl']: textSize === 'xl',
-      ['rounded']: rounded,
-      ['rounded-t']: roundedTop,
-      ['rounded-r']: roundedRight,
-      ['rounded-b']: roundedBottom,
-      ['rounded-l']: roundedLeft,
+      ['bg-sky-700']: active && buttonType === 'primary',
+      ['px-2 py-0 text-xs']: size === 'xs',
+      ['px-3 py-1 text-sm']: size === 'sm',
+      ['px-4 py-2 text-base']: size === 'base',
+      ['px-5 py-3 text-lg']: size === 'lg',
+      ['px-6 py-4 text-xl']: size === 'xl',
+      ['rounded']: rounded === 'all',
+      ['rounded-none']: rounded === 'none',
+      ['rounded-t']: rounded === 'top',
+      ['rounded-r']: rounded === 'right',
+      ['rounded-b']: rounded === 'bottom',
+      ['rounded-l']: rounded === 'left',
+      ['no-underline text-current']: isLink,
+      ['shadow']: !noShadow,
     }"
   >
     <slot />
-  </button>
+  </component>
 </template>
