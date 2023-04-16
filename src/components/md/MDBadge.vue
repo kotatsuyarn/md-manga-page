@@ -8,28 +8,28 @@ const props = withDefaults(
     href?: string;
     dotColor?: BadgeDotColor;
     hasDot?: boolean;
-    hasBackground?: boolean;
+    onlyText?: boolean;
   }>(),
   {
     href: '',
     dotColor: 'green',
     hasDot: false,
-    hasBackground: false,
+    onlyText: false,
   },
 );
 
-const hasHref = computed(() => props.href.length > 0);
-const is = computed(() => (hasHref.value ? 'a' : 'span'));
+const isLink = computed(() => props.href.length > 0);
+const is = computed(() => (isLink.value ? 'a' : 'span'));
 </script>
 
 <template>
   <component
     :is="is"
-    class="px-1 py-0.25 text-xs text-light-100 rounded"
+    class="px-1 py-0.25 text-xs text-current rounded"
     :class="{
-      ['no-underline']: hasHref,
+      ['no-underline']: isLink,
       ['flex gap-1 items-center']: hasDot,
-      ['bg-true-gray-500']: hasBackground,
+      ['bg-dark-100']: !onlyText,
     }"
     :href="href"
   >
